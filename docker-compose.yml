@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  wagmi-builder:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: wagmi-builder
+    volumes:
+      - .:/workspace
+      - cargo-cache:/root/.cargo
+    environment:
+      - RUST_BACKTRACE=1
+    working_dir: /workspace
+    command: /bin/bash
+    stdin_open: true
+    tty: true
+
+volumes:
+  cargo-cache:

@@ -1,0 +1,43 @@
+{
+  "name": "belief-market",
+  "version": "0.1.0",
+  "description": "Multi-outcome prediction market platform for Eclipse SVM",
+  "main": "client/src/lib.ts",
+  "types": "client/src/lib.ts",
+  "license": "MIT",
+  "keywords": [
+    "eclipse",
+    "svm",
+    "solana",
+    "prediction",
+    "market",
+    "parimutuel",
+    "anchor"
+  ],
+  "dependencies": {
+    "@anchor-lang/anchor": "^0.30.1",
+    "@solana/web3.js": "^1.91.0",
+    "@solana/spl-token": "^0.4.0",
+    "@solana/wallet-adapter-base": "^0.9.23",
+    "@solana/wallet-adapter-react": "^0.15.36",
+    "@solana/wallet-adapter-wallets": "^0.19.32",
+    "@solana/wallet-adapter-react-ui": "^0.9.41",
+    "borsh": "^0.7.0",
+    "bs58": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "typescript": "^5.3.3",
+    "ts-node": "^10.9.2",
+    "ts-mocha": "^10.0.0",
+    "mocha": "^10.2.0",
+    "@anchor-lang/cli": "^0.30.1"
+  },
+  "scripts": {
+    "build": "anchor build",
+    "test": "anchor test",
+    "deploy": "anchor deploy",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write 'client/**/*.ts' 'tests/**/*.ts'"
+  }
+}
